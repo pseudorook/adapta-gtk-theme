@@ -346,12 +346,12 @@ StScrollBar {
 
 .popup {
   &-menu-boxpointer {
-    -arrow-border-radius: 0;
-    -arrow-background-color: transparent;
-    -arrow-border-width: 0;
-    -arrow-border-color: transparent;
-    -arrow-base: 0;
-    -arrow-rise: 0;
+    -arrow-border-radius: 3px;
+    -arrow-background-color: $osd_bg;
+    -arrow-border-width: 1px;
+    -arrow-border-color: $osd_bg;
+    -arrow-base: 21px;
+    -arrow-rise: 9px;
     -arrow-box-shadow: $empty_shadow; // dreaming. bug #689995
     margin: 0.4em 0.5em 0.5em;
     border-radius: $r_4;
