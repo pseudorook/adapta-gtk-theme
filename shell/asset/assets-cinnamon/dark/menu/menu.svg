@@ -14,7 +14,7 @@
    viewBox="0 0 32 32"
    id="svg5386"
    version="1.1"
-   inkscape:version="0.92+devel (unknown)"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="menu.svg">
   <defs
      id="defs5388">
@@ -117,11 +117,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="31.999998"
-     inkscape:cx="15.406704"
-     inkscape:cy="20.214263"
+     inkscape:zoom="15.999999"
+     inkscape:cx="6.3442034"
+     inkscape:cy="12.714263"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g837"
      showgrid="true"
      units="px"
      inkscape:snap-bbox="true"
@@ -129,9 +129,9 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1022"
+     inkscape:window-height="1048"
      inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:document-rotation="0">
     <inkscape:grid
@@ -183,8 +183,8 @@
          rx="2"
          y="1027.4602"
          x="5.0000005"
-         height="21"
-         width="22"
+         height="24.912569"
+         width="21.906822"
          id="rect832-3"
          style="opacity:1;fill:#000000;fill-opacity:0.46000001;fill-rule:evenodd;stroke:none;stroke-opacity:0.12999998;filter:url(#filter857)" />
       <rect
@@ -192,7 +192,7 @@
          rx="3.50103"
          y="1025.8612"
          x="5.4989672"
-         height="20.002066"
+         height="26.002075"
          width="21.002064"
          id="rect832"
          style="opacity:1;fill:#080808;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.99793488;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
