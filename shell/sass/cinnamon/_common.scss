@@ -1729,8 +1729,8 @@ $ws_thumb_spacing: 32px;
 .panel-launcher {
   border: 0 solid transparent;
 
-  @each $position, $_padding in (top, 0 4px 2px 4px),
-                                (bottom, 2px 4px 0 4px),
+  @each $position, $_padding in (top, 0 0 2px 0),
+                                (bottom, 2px 0 0 0),
                                 (left, 2px 2px 2px 0),
                                 (right, 2px 0 2px 2px) {
     .panel-#{$position} & {
@@ -1743,8 +1743,8 @@ $ws_thumb_spacing: 32px;
     border: 0 solid $osd_indicator_color;
     background-gradient-direction: none;
 
-    @each $position, $_padding in (top, 0 4px 2px 4px),
-                                  (bottom, 2px 4px 0 4px),
+    @each $position, $_padding in (top, 0 0 2px 0),
+                                  (bottom, 2px 0 0 0),
                                   (left, 2px 2px 2px 0),
                                   (right, 2px 0 2px 2px) {
       .panel-#{$position} & {
@@ -1757,9 +1757,18 @@ $ws_thumb_spacing: 32px;
 
 // 3.2.x
 .launcher {
-  padding: 2px;
-  spacing: 2px;
   transition-duration: 0.2s;
+
+  @each $position, $_padding in (top, 0 0 2px 0),
+                                (bottom, 2px 0 0 0),
+                                (left, 2px 2px 2px 0),
+                                (right, 2px 0 2px 2px) {
+    .panel-#{$position} & {
+      padding: #{$_padding};
+      border-#{$position}-width: 2px;
+    }
+  }
+
   &:hover {
     border: 0 solid $osd_indicator_color;
     background-gradient-direction: none;
@@ -1838,8 +1847,8 @@ $ws_thumb_spacing: 32px;
     }
     &:highlight { background-color: $accent_fill_color; }
 
-    @each $position, $_padding, $_indicator in (top, 0 6px, 0 2px),
-                                               (bottom, 0 6px, 0 -2px),
+    @each $position, $_padding, $_indicator in (top, 0 4px, 0 2px),
+                                               (bottom, 0 4px, 0 -2px),
                                                (left, 2px 0, 2px 0),
                                                (right, 2px 0, -2px 0) {
       .panel-#{$position} & {
