@@ -796,12 +796,12 @@ $extra_spacing: 2.5px;
     height: 3px;
     border-radius: 0;
     background-color: $osd_outline_fill_color;
-    color: $success_color;
+    color: $accent_color;
   }
 
   .level-bar {
     border-radius: 0;
-    background-color: $success_color;
+    background-color: $accent_color;
   }
 }
 
