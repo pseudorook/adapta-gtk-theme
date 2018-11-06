@@ -1341,11 +1341,10 @@ $ws_thumb_spacing: 32px;
 
     &-hover,
     &-selected {
+      @include button(flat-hover);
       padding: 0 7px;
-      border-radius: 2px;
       border: 1px solid transparent;
-      background-color: shellopacity($selected_bg_color, 0.12);
-      color: $selected_bg_color;
+      &:highlighted { font-weight: 700; }
     }
 
     &-greyed {
