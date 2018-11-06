@@ -770,8 +770,8 @@ $extra_spacing: 2.5px;
 
 .popup-menu {
   &-arrow { // not really top bar only
-    width: 16px;
-    height: 16px;
+    width: 8px;
+    height: 8px;
   }
 
   &-icon { icon-size: 16px; }
@@ -791,16 +791,12 @@ $extra_spacing: 2.5px;
 .popup-menu-boxpointer {
   -arrow-border-radius: 2px; // FIXME: need more than 2px
   -arrow-background-color: $secondary_base_color; // fake arrows
-  -arrow-border-width: 0;
-  -arrow-border-color: transparent;
-  -arrow-base: 48px; // 'popup-menu-arrow' base * 3
-  -arrow-rise: 0;
-  -arrow-box-shadow: $empty_shadow; // dreaming. bug #689995
+  -arrow-border-width: 1px;
+  -arrow-border-color: $borders_color;
+  -arrow-base: 24px; // 'popup-menu-arrow' base * 3
+  -arrow-rise: 11px;
+  -arrow-box-shadow: $z-depth-3; // dreaming. bug #689995
   margin: 0.1em 0.3em 0.5em;
-  border-radius: 2px;
-  border-top: 1px solid $menu_highlight;
-  background-color: $secondary_base_color;
-  box-shadow: $z-depth-3;
 }
 
 .candidate-popup-boxpointer {
@@ -808,16 +804,11 @@ $extra_spacing: 2.5px;
   -arrow-background-color: shellopacity($osd_bg_color, 0.9);
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
-  -arrow-base: 48px;
-  -arrow-rise: 0;
-  -arrow-box-shadow: $empty_shadow;
+  -arrow-base: 24px;
+  -arrow-rise: 11px;
+  -arrow-box-shadow: $z-depth-3;
   margin: 0.1em 0.3em 0.5em;
-  border-radius: 2px;
-  border-top: 1px solid transparent;
-  background: transparent; // needs to reset?
-  background-color: shellopacity($osd_bg_color, 0.9);
   color: $osd_secondary_fg_color;
-  box-shadow: $z-depth-3;
 }
 
 .popup-separator-menu-item {
