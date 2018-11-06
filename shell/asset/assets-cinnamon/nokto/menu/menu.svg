@@ -15,7 +15,7 @@
    viewBox="0 0 32 32"
    id="svg5386"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="menu.svg">
   <defs
      id="defs5388">
@@ -141,20 +141,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="15.999999"
-     inkscape:cx="-3.1557969"
-     inkscape:cy="15.214263"
+     inkscape:cx="12.026217"
+     inkscape:cy="11.167186"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="true"
+     inkscape:current-layer="g837"
+     showgrid="false"
      units="px"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1022"
+     inkscape:window-height="1048"
      inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-y="0"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -199,25 +199,31 @@
      transform="translate(0,-1020.3622)">
     <g
        id="g837">
-      <rect
-         transform="matrix(1.0061527,0,0,1.0063667,-0.09860346,-6.7064449)"
-         ry="2"
-         rx="2"
-         y="1027.4602"
-         x="5.0000005"
-         height="21"
-         width="22"
-         id="rect832-3"
-         style="opacity:1;fill:#000000;fill-opacity:0.46000001;fill-rule:evenodd;stroke:none;stroke-opacity:0.12999998;filter:url(#filter857)" />
-      <rect
-         ry="1.9049587"
-         rx="1.9092785"
-         y="1025.8612"
-         x="5.4989672"
-         height="20.002066"
-         width="21.002064"
-         id="rect832"
-         style="opacity:1;fill:#28343a;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient896);stroke-width:0.99793488;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g3760">
+        <g
+           id="g3755">
+          <rect
+             transform="matrix(1.0061527,0,0,1.0063667,-0.09860346,-6.7064449)"
+             ry="2"
+             rx="2"
+             y="1027.4602"
+             x="5.0000005"
+             height="24.912598"
+             width="22.046587"
+             id="rect832-3"
+             style="opacity:1;fill:#000000;fill-opacity:0.46000001;fill-rule:evenodd;stroke:none;stroke-opacity:0.12999998;filter:url(#filter857)" />
+          <rect
+             ry="1.9049587"
+             rx="1.9092785"
+             y="1025.8612"
+             x="5.4989672"
+             height="26.018799"
+             width="21.023502"
+             id="rect832"
+             style="opacity:1;fill:#28343a;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient896);stroke-width:0.99793488;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        </g>
+      </g>
     </g>
   </g>
 </svg>
