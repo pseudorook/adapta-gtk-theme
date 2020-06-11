@@ -472,7 +472,7 @@ dialog.background.csd > box.dialog-vbox.vertical {
 }
 
 .background.nautilus-window:not(.nautilus-desktop-window) {
-  &:not(nautilus-desktop-window) {
+  &:not(.nautilus-desktop-window) {
     // enforce base-color backgrounds
     background-color: $base_color;
 
