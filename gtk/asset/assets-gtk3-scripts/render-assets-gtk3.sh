@@ -18,8 +18,9 @@ INDEX_SRC="assets-gtk3.txt"
 INDEX=""
 KEY_FILE="../../sass/common/_key_colors.scss"
 
-inkver="`$INKSCAPE --version | awk '{print $2}' | cut -c 1-4`"
-if [ "$inkver" = 0.91 ]; then
+ink_maj_ver="`$INKSCAPE --version | grep Ink | awk '{print $2}' | cut -c 1`"
+ink_mnr_ver="`$INKSCAPE --version | grep Ink | awk '{print $2}' | cut -c 3-4`"
+if [ "$ink_maj_ver"."$ink_mnr_ver" = 0.91 ]; then
     non_scale_dpi=90
     scale_dpi=180
 else
@@ -27,21 +28,31 @@ else
     scale_dpi=192
 fi
 
+if [ "$ink_maj_ver" -ge 1 ]; then
+    if [ "$ink_mnr_ver" = '0b' ]; then
+        ink_export_option="--export-file"
+    else
+        ink_export_option="--export-filename"
+    fi
+else
+    ink_export_option="--export-png"
+fi
+
 #Renderer
 render-non-scale() {
     $INKSCAPE --export-id=$i \
               --export-dpi="$non_scale_dpi" \
               --export-id-only \
-              --export-png=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null \
-                                                        2>>../inkscape.log
+              $ink_export_option=$ASSETS_DIR/$i.png $SRC_FILE \
+              >/dev/null 2>>../inkscape.log
 }
 
 render-scale() {
     $INKSCAPE --export-id=$i \
               --export-dpi="$scale_dpi" \
               --export-id-only \
-              --export-png=$ASSETS_DIR/$i@2.png $SRC_FILE >/dev/null \
-                                                          2>>../inkscape.log
+              $ink_export_option=$ASSETS_DIR/$i@2.png $SRC_FILE \
+              >/dev/null 2>>../inkscape.log
 }
 
 # Generate PNG files

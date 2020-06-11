@@ -39,21 +39,34 @@ IFS=$'
     fi
 fi
 
-inkver="`$INKSCAPE --version | awk '{print $2}' | cut -c 1-4`"
-if [ "$inkver" = 0.91 ]; then
+ink_maj_ver="`$INKSCAPE --version | grep Ink | awk '{print $2}' | cut -c 1`"
+ink_mnr_ver="`$INKSCAPE --version | grep Ink | awk '{print $2}' | cut -c 3-4`"
+if [ "$ink_maj_ver"."$ink_mnr_ver" = 0.91 ]; then
     non_scale_dpi=90
 else
     non_scale_dpi=96
 fi
 
+if [ "$ink_maj_ver" -ge 1 ]; then
+    if [ "$ink_mnr_ver" = '0b' ]; then
+        ink_export_option="--export-file"
+    else
+        ink_export_option="--export-filename"
+    fi
+else
+    ink_export_option="--export-png"
+fi
+
 # Renderer
 render-non-scale() {
     $INKSCAPE --export-dpi="$non_scale_dpi" \
-              --export-png=$ASSETS_DIR/$THUMB.png $SRC_DIR/$THUMB.svg >/dev/null \
-                                                                      2>>inkscape.log
+              $ink_export_option=$ASSETS_DIR/$THUMB.png \
+              $SRC_DIR/$THUMB.svg \
+              >/dev/null 2>>inkscape.log
     $INKSCAPE --export-dpi="$non_scale_dpi" \
-              --export-png=$ASSETS_DARK_DIR/$THUMB.png $SRC_DARK_DIR/$THUMB.svg >/dev/null \
-                                                                                2>>inkscape.log
+              $ink_export_option=$ASSETS_DARK_DIR/$THUMB.png \
+              $SRC_DARK_DIR/$THUMB.svg \
+              >/dev/null 2>>inkscape.log
 }
 
 # Generate PNG file
