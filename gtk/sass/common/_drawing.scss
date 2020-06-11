@@ -19,7 +19,7 @@
 // Scaling function
 //
 
-$ref_size: 14.67px; // = 11pt = 1em
+$ref_size: 13.73px; // = 10.3pt = 1em
 
 @function rem($px, $fs: $ref_size, $sw: $ref_weight) {
   @return round($px / $fs * $sw * 100) / 100 * 1rem;
